@@ -1,0 +1,106 @@
+:root {
+  /* Brand Palette - Deep Navy, Warm Gold, Ivory, and Restrained Warm Grey */
+  --navy-950: #050b14;
+  --navy-900: #0a192f;
+  --navy-850: #0d203d;
+  --navy-800: #112a4d;
+  --navy-700: #1a3c68;
+  --navy-600: #25528a;
+  --navy-500: #346cb0;
+
+  --gold-700: #8c6b16;
+  --gold-600: #aa831e;
+  --gold-500: #c59b27;
+  --gold-400: #d8af3a;
+  --gold-300: #ebd068;
+  --gold-200: #f5e49e;
+  --gold-100: #fdf8e9;
+  --gold-50:  #fffdf7;
+
+  --whatsapp-green: #25d366;
+  --whatsapp-green-hover: #20bd5a;
+  --whatsapp-bg: rgba(37, 211, 102, 0.12);
+  --whatsapp-border: rgba(37, 211, 102, 0.35);
+
+  /* Light Theme Defaults */
+  --bg-page: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-alt: #f1f5f9;
+  --bg-hero: #0a192f;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #f8fafc;
+  --text-gold: #aa831e;
+
+  --border-light: rgba(15, 23, 42, 0.08);
+  --border-medium: rgba(15, 23, 42, 0.14);
+  --border-gold: rgba(197, 155, 39, 0.35);
+
+  /* Floating Pill Navbar Variables (Image 5 style) */
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --nav-border: rgba(226, 232, 240, 0.8);
+  --nav-shadow: 0 12px 36px -8px rgba(10, 25, 47, 0.09), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  --nav-link-color: #334155;
+  --nav-link-hover: #0a192f;
+  --nav-link-active-bg: rgba(10, 25, 47, 0.06);
+
+  /* Radii */
+  --radius-pill: 9999px;
+  --radius-2xl: 28px;
+  --radius-xl: 20px;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+
+  /* Typography */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px -4px rgba(10, 25, 47, 0.08), 0 3px 8px -2px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 18px 42px -6px rgba(10, 25, 47, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.04);
+  --shadow-gold: 0 10px 30px -4px rgba(197, 155, 39, 0.28);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Container */
+  --max-width: 1260px;
+  --nav-width: 1320px;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --bg-page: #060d17;
+  --bg-surface: #0a1626;
+  --bg-surface-elevated: #0f1f35;
+  --bg-surface-alt: #0d1b2e;
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-gold: #ebd068;
+
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-gold: rgba(212, 175, 55, 0.4);
+
+  --nav-bg: rgba(10, 22, 38, 0.88);
+  --nav-border: rgba(255, 255, 255, 0.12);
+  --nav-shadow: 0 14px 40px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --nav-link-color: #cbd5e1;
+  --nav-link-hover: #ffffff;
+  --nav-link-active-bg: rgba(255, 255, 255, 0.1);
+
+  --shadow-sm: 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 18px 42px -6px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 10px 30px -4px rgba(212, 175, 55, 0.35);
+}

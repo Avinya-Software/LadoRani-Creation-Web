@@ -1,0 +1,26 @@
+{
+  "name": "Lado Rani Creation - Digital Textile Printing Surat",
+  "short_name": "Lado Rani Creation",
+  "description": "Premier digital textile printing and job-work mill in Surat, Gujarat. Precision in Every Print.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c59b27",
+  "icons": [
+    {
+      "src": "/assets/fevicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/fevicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/fevicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

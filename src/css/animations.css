@@ -1,0 +1,125 @@
+/* ==========================================================================
+   UI ANIMATIONS & MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* Reveal on Scroll primitives */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  will-change: opacity;
+}
+
+.reveal-fade-left {
+  opacity: 0;
+  transform: translateX(-35px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-fade-right {
+  opacity: 0;
+  transform: translateX(35px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-zoom-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* When visible in viewport */
+.is-revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* Stagger Delays for child cards */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* Gentle Shimmer Highlight */
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(197, 155, 39, 0) 0%,
+    rgba(197, 155, 39, 0.25) 50%,
+    rgba(197, 155, 39, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 4s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Badge Glow animation */
+.glow-badge {
+  position: relative;
+}
+
+.glow-badge::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.4) 0%, transparent 70%);
+  z-index: -1;
+  opacity: 0.6;
+  animation: badge-pulse 3s infinite ease-in-out;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+}
+
+/* Floating element effect */
+.anim-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Card Hover (Clean without artificial hover border lines) */
+.interactive-hover-card {
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+/* Respect Accessibility Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-fade-up,
+  .reveal-fade-in,
+  .reveal-fade-left,
+  .reveal-fade-right,
+  .reveal-zoom-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

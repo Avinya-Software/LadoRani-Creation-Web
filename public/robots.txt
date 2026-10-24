@@ -1,0 +1,65 @@
+# robots.txt for https://www.ladoranicreation.com/
+#
+# GEO policy (deliberate): every search engine and AI assistant is ALLOWED, including
+# training crawlers (GPTBot, Google-Extended, Applebot-Extended), because the business
+# wants to be known and cited by AI answers. To opt out of AI training but keep AI search
+# citations, change "Allow: /" to "Disallow: /" for GPTBot, Google-Extended and
+# Applebot-Extended only, and keep OAI-SearchBot, ChatGPT-User, PerplexityBot and Claude-* allowed.
+User-agent: *
+Allow: /
+Disallow: /*?*
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Answer engines and AI search assistants (cite and link to pages in answers)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://www.ladoranicreation.com/sitemap.xml

@@ -1,0 +1,515 @@
+/* ==========================================================================
+   PAGE HEADERS, BREADCRUMBS & INNER PAGE STYLING
+   ========================================================================== */
+
+/* Inner Page Header Hero Banner */
+.page-hero-banner {
+  padding-top: calc(var(--nav-height, 70px) + 3.5rem);
+  padding-bottom: 3.5rem;
+  background: linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(197, 155, 39, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-hero-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: #ffffff;
+  font-weight: 800;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.15;
+}
+
+.page-hero-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 780px;
+  line-height: 1.6;
+}
+
+/* Breadcrumbs Styling */
+.breadcrumbs-nav {
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.breadcrumb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb-link:hover {
+  color: var(--gold-400);
+}
+
+.breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.breadcrumb-current {
+  color: var(--gold-300);
+  font-weight: 600;
+}
+
+/* Light background breadcrumbs (inside content areas) */
+.breadcrumbs-light .breadcrumbs-list {
+  color: var(--text-muted);
+}
+.breadcrumbs-light .breadcrumb-link {
+  color: var(--text-secondary);
+}
+.breadcrumbs-light .breadcrumb-link:hover {
+  color: var(--navy-900);
+}
+.breadcrumbs-light .breadcrumb-separator {
+  color: var(--border-medium);
+}
+.breadcrumbs-light .breadcrumb-current {
+  color: var(--gold-600);
+}
+
+/* Home Section Teaser Callout / View More Button */
+.section-teaser-bar {
+  margin-top: 2.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.btn-teaser-view-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-medium);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-teaser-view-more:hover {
+  background: var(--gold-500);
+  color: #ffffff;
+  border-color: var(--gold-500);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-teaser-view-more svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn-teaser-view-more:hover svg {
+  transform: translateX(4px);
+}
+
+.teaser-hint-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Specifications Table (Services / Process) */
+.specs-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-surface);
+  margin-top: 2rem;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.specs-table th {
+  background: var(--bg-surface-alt);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-medium);
+  white-space: nowrap;
+}
+
+.specs-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-secondary);
+}
+
+.specs-table tr:last-child td {
+  border-bottom: none;
+}
+
+.specs-table tr:hover td {
+  background: rgba(197, 155, 39, 0.04);
+}
+
+/* Feature Check Tag */
+.check-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.check-tag-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface-alt);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+}
+
+.check-tag-item svg {
+  color: #10b981;
+}
+
+/* Quick Page Navigation / Sticky Subnav */
+.subpage-lead-card {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-2xl);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 3rem;
+}
+
+/* 404 Page */
+.not-found-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(var(--nav-height, 70px) + 4rem) 1.5rem 4rem;
+}
+
+.not-found-code {
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: 900;
+  font-family: var(--font-heading);
+  line-height: 1;
+  background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.not-found-title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+
+.not-found-desc {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* FAQ questions are h3 for heading structure; keep the button's existing look */
+.faq-question-heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Semantic ordered list for process steps without changing the timeline layout */
+ol.process-timeline {
+  list-style: none;
+  padding-left: 0;
+}
+
+.specs-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 1rem 1.25rem 0;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Google Business Profile card (same NAP as the Google listing) */
+.gbp-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  text-align: left;
+}
+
+.gbp-card--with-map {
+  max-width: 1100px;
+}
+
+@media (min-width: 900px) {
+  .gbp-card--with-map {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.gbp-card-body {
+  padding: 1.75rem;
+}
+
+.gbp-card-name {
+  font-size: 1.35rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.gbp-card-category {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.gbp-card-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.gbp-card-rating strong {
+  color: var(--text-primary);
+}
+
+.gbp-card-stars {
+  display: inline-flex;
+  color: #f4b400;
+}
+
+.gbp-card-details {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.gbp-card-details li {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.gbp-card-details svg {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: var(--gold-600);
+}
+
+.gbp-card-details a {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.gbp-status-open {
+  color: #15803d;
+}
+
+.gbp-status-closed {
+  color: #b91c1c;
+}
+
+.gbp-card-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+@media (max-width: 520px) {
+  .gbp-card-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gbp-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.7rem 0.4rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy-900);
+  background: var(--bg-surface-alt);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+[data-theme="dark"] .gbp-action {
+  color: var(--text-primary);
+}
+
+.gbp-action:hover {
+  border-color: var(--gold-400);
+  transform: translateY(-2px);
+}
+
+.gbp-action svg {
+  color: var(--gold-600);
+}
+
+.gbp-card-map {
+  min-height: 300px;
+}
+
+.gbp-card-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: 0;
+  display: block;
+}
+
+/* Small "last updated" line in the footer (content freshness signal) */
+.footer-updated {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Surat location page */
+.local-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.local-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-md);
+}
+
+.local-card-title {
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+}
+
+.local-card-desc {
+  margin: 0;
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.local-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.local-list,
+.local-steps {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.55rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.local-list li::marker,
+.local-steps li::marker {
+  color: var(--gold-600);
+  font-weight: 700;
+}
+
+/* Privacy policy / terms */
+.legal-content {
+  max-width: 820px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.legal-content h2 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.6rem;
+}
+
+.legal-content ul {
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.legal-content a {
+  color: var(--gold-600);
+  font-weight: 600;
+}

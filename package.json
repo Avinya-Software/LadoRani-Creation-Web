@@ -1,0 +1,24 @@
+{
+  "name": "ladoranicreation-website",
+  "version": "1.0.0",
+  "description": "Lado Rani Creation - Official Website. Digital Textile Printing & Transfer Paper Printing in Surat, Gujarat.",
+  "type": "module",
+  "scripts": {
+    "dev": "node api.js && vite",
+    "build": "node api.js && vite build && vite build --ssr src/entry-server.jsx --outDir dist-server && node scripts/prerender.js",
+    "preview": "vite preview",
+    "validate:seo": "node scripts/validate-seo.js",
+    "indexnow": "node scripts/indexnow.js",
+    "check:bots": "node scripts/check-bot-logs.js"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "lucide-react": "^1.59.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4"
+  }
+}
